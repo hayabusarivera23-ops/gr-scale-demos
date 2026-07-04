@@ -117,7 +117,8 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
             style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
         )}
 
-        <div className="container-demo relative py-24 md:py-32 lg:py-40">
+        <div className="container-demo relative py-24 md:py-28 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-[1fr_380px] items-center">
           <div className="max-w-3xl">
             {/* Tag */}
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-sm font-medium text-white/90 mb-6">
@@ -164,6 +165,39 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Hero lead-capture card (desktop) */}
+          <div className="hidden lg:block">
+            <div className="rounded-2xl bg-white shadow-2xl shadow-black/30 p-7">
+              <div className="mb-5">
+                <p className="text-lg font-extrabold text-gray-900">Get Your Free Estimate</p>
+                <p className="text-sm text-gray-500 mt-1">Takes 30 seconds · No obligation · We respond within 2 business hours</p>
+              </div>
+              <form action={`${base}/quote`} className="space-y-3">
+                <input type="text" name="name" placeholder="Your name" aria-label="Your name"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-300" />
+                <input type="tel" name="phone" placeholder="Phone number" aria-label="Phone number"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900/10 focus:border-gray-300" />
+                <select name="service" aria-label="Service needed" defaultValue=""
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900/10">
+                  <option value="" disabled>What do you need?</option>
+                  {cfg.services.slice(0, 5).map(s => <option key={s.name} value={s.name}>{s.name}</option>)}
+                  <option value="other">Something else</option>
+                </select>
+                <button type="submit"
+                  className={`w-full inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold transition ${theme.btnPrimary}`}>
+                  Get My Free Estimate <ArrowRight className="h-4 w-4" />
+                </button>
+              </form>
+              <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                <span className="text-xs text-gray-400">Prefer to talk?</span>
+                <a href={`tel:${cfg.phone}`} className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-900 hover:underline">
+                  <Phone className="h-3.5 w-3.5" /> {cfg.phone}
+                </a>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </section>

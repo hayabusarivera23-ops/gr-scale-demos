@@ -76,9 +76,9 @@ const config: DemoConfig = {
   ],
 
   gallery: [
-    { label: 'Bathroom Repipe',  desc: 'Full fixture upgrade + repipe — spa-quality finish', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=75' },
-    { label: 'Fixture Upgrade',  desc: 'Designer fixtures installed — kitchen and both baths', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=75' },
-    { label: 'Leak Repair',      desc: 'Dripping faucet and supply lines — fixed in one visit', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Bathroom Remodel', desc: 'Full repipe + designer fixtures — spa-quality master bath', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Fixture Upgrade',  desc: 'Designer fixtures installed — kitchen and both baths', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Leak Repair',      desc: 'Supply lines and faucet — fixed in one visit, tested under pressure', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=1200&q=75' },
     { label: 'Repipe Project',   desc: 'Full home repipe — 4 bed/2 bath, 2 days',        before: 'bg-gray-800', after: 'bg-blue-900' },
     { label: 'Bathroom Remodel', desc: 'Full rough-in for master bath addition',          before: 'bg-gray-800', after: 'bg-blue-900' },
     { label: 'Backflow Test',    desc: 'Annual backflow prevention testing & cert',       before: 'bg-gray-800', after: 'bg-blue-900' },

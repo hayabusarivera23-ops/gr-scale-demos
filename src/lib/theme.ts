@@ -43,7 +43,7 @@ export interface DemoTheme {
 const THEMES: Record<string, DemoTheme> = {
   blue: {
     heroBg:           'from-blue-950 via-blue-900 to-slate-900',
-    btnPrimary:       'bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white shadow-lg shadow-blue-600/25',
+    btnPrimary:       'bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white shadow-lg shadow-blue-600/30 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all',
     btnSecondary:     'bg-white/10 hover:bg-white/20 text-white border border-white/25',
     btnOutline:       'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white',
     accentText:       'text-blue-600',
@@ -65,7 +65,7 @@ const THEMES: Record<string, DemoTheme> = {
   },
   amber: {
     heroBg:           'from-amber-950 via-amber-900 to-slate-900',
-    btnPrimary:       'bg-amber-500 hover:bg-amber-400 active:bg-amber-600 text-white shadow-lg shadow-amber-500/25',
+    btnPrimary:       'bg-amber-500 hover:bg-amber-400 active:bg-amber-600 text-white shadow-lg shadow-amber-500/30 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all',
     btnSecondary:     'bg-white/10 hover:bg-white/20 text-white border border-white/25',
     btnOutline:       'border-2 border-amber-500 text-amber-600 hover:bg-amber-500 hover:text-white',
     accentText:       'text-amber-600',
@@ -87,7 +87,7 @@ const THEMES: Record<string, DemoTheme> = {
   },
   orange: {
     heroBg:           'from-orange-950 via-orange-900 to-slate-900',
-    btnPrimary:       'bg-orange-500 hover:bg-orange-400 active:bg-orange-600 text-white shadow-lg shadow-orange-500/25',
+    btnPrimary:       'bg-orange-500 hover:bg-orange-400 active:bg-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all',
     btnSecondary:     'bg-white/10 hover:bg-white/20 text-white border border-white/25',
     btnOutline:       'border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white',
     accentText:       'text-orange-600',
@@ -109,7 +109,7 @@ const THEMES: Record<string, DemoTheme> = {
   },
   green: {
     heroBg:           'from-green-950 via-green-900 to-slate-900',
-    btnPrimary:       'bg-green-600 hover:bg-green-500 active:bg-green-700 text-white shadow-lg shadow-green-600/25',
+    btnPrimary:       'bg-green-600 hover:bg-green-500 active:bg-green-700 text-white shadow-lg shadow-green-600/30 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all',
     btnSecondary:     'bg-white/10 hover:bg-white/20 text-white border border-white/25',
     btnOutline:       'border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white',
     accentText:       'text-green-600',

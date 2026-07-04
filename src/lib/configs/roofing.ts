@@ -110,7 +110,7 @@ const config: DemoConfig = {
   ],
 
   gallery: [
-    { label: 'Shingle Replacement',  desc: 'Full architectural shingle replacement — 2,400 sq ft', before: 'bg-gray-800', after: 'bg-amber-900', img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Shingle Replacement',  desc: 'Full architectural shingle replacement — 2,400 sq ft', before: 'bg-gray-800', after: 'bg-amber-900', img: 'https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=75' },
     { label: 'Storm Damage',         desc: 'Insurance-covered replacement after hurricane damage',  before: 'bg-gray-800', after: 'bg-amber-900', img: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=75' },
     { label: 'Metal Roof Install',   desc: 'Standing seam metal roof on custom home',               before: 'bg-gray-800', after: 'bg-amber-900', img: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=75' },
     { label: 'Tile Roof',            desc: 'Concrete tile replacement — Mediterranean style',       before: 'bg-gray-800', after: 'bg-amber-900' },
