@@ -44,6 +44,20 @@ const config: DemoConfig = {
     body:     'Don\'t let budget delay a roof that\'s protecting everything you own. Flexible financing gets your roof replaced now with payments that fit your budget.',
     points:   ['0% interest options available', 'Terms up to 120 months', '60-second approval decision'],
   },
+
+  stats: [
+    { value: 17,   suffix: '+',  label: 'Years protecting Orlando homes' },
+    { value: 3200, suffix: '+',  label: 'Roofs replaced & repaired' },
+    { value: 98,   suffix: '%',  label: 'Insurance claims approved' },
+    { value: 10,   suffix: '-yr', label: 'Workmanship warranty' },
+  ],
+
+  process: [
+    { title: 'Free Inspection',       desc: 'A certified inspector documents your roof with photos — drone views included. You get the full report, no obligation.' },
+    { title: 'Claim or Quote',        desc: 'Storm damage? We meet your adjuster and handle the claim. Otherwise you get an exact written quote — good for 90 days.' },
+    { title: 'Build Day',             desc: 'Most roofs done in 1-2 days. Landscaping protected, magnetic nail sweep of your entire yard, dumpster gone same week.' },
+    { title: 'Final Walkthrough',     desc: 'We walk the roof with you, register your warranties, and hand over the full photo package for your records.' },
+  ],
   metaTitle:       'Peak Roofing Solutions — Orlando Roofing Contractor | Free Inspection',
   metaDescription: 'Licensed Orlando roofing contractor. Free inspections, storm damage specialists, 10-year warranty. Call (407) 555-0200 for a free estimate.',
 

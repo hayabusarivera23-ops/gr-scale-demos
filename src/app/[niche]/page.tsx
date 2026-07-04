@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import { getDemo, VALID_SLUGS } from '@/lib/demo-registry'
 import { getTheme } from '@/lib/theme'
+import { Reveal, AnimatedStat, BeforeAfterSlider, StickyCallBar } from '@/components/demo/Premium'
 import type { ElementType } from 'react'
 
 export function generateStaticParams() {
@@ -262,19 +263,16 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
       <section className="py-20 bg-white">
         <div className="container-demo">
           <div className="grid gap-14 lg:grid-cols-2 items-center">
-            {/* Stats */}
+            {/* Animated stats */}
             <div className="grid grid-cols-2 gap-5">
-              {[
-                { num: `${yearsInBusiness}+`, label: `Years serving ${cfg.city}` },
-                { num: '500+',               label: 'Jobs completed'          },
-                { num: '5.0★',               label: 'Average Google rating'   },
-                { num: '100%',               label: 'Satisfaction guaranteed'  },
-              ].map(s => (
-                <div key={s.label}
-                  className={`rounded-2xl ${theme.accentBgLight} p-6 text-center`}>
-                  <p className={`text-4xl font-extrabold ${theme.accentText} mb-1`}>{s.num}</p>
-                  <p className="text-sm text-gray-600 leading-tight">{s.label}</p>
-                </div>
+              {(cfg.stats ?? [
+                { value: yearsInBusiness, suffix: '+',  label: `Years serving ${cfg.city}` },
+                { value: 500,             suffix: '+',  label: 'Jobs completed' },
+                { value: 5,               suffix: '.0★', label: 'Average Google rating' },
+                { value: 100,             suffix: '%',  label: 'Satisfaction guaranteed' },
+              ]).map(s => (
+                <AnimatedStat key={s.label} value={s.value} suffix={s.suffix} label={s.label}
+                  accentClass={theme.accentText} bgClass={theme.accentBgLight} />
               ))}
             </div>
 
@@ -366,6 +364,79 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
           </div>
         </div>
       </section>
+
+      {/* ── PROCESS TIMELINE (flagship) ──────────────────────────────── */}
+      {cfg.process && (
+        <section className="py-20 bg-white">
+          <div className="container-demo">
+            <Reveal>
+              <div className="text-center mb-14">
+                <p className={`text-xs font-bold uppercase tracking-widest ${theme.accentText} mb-2`}>How It Works</p>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                  From First Call to Job Done
+                </h2>
+                <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+                  No runaround, no surprises. Here&apos;s exactly what happens when you call us.
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {cfg.process.map((step, i) => (
+                <Reveal key={step.title} delay={i * 120}>
+                  <div className="relative rounded-2xl border border-gray-100 bg-white p-6 shadow-sm h-full">
+                    <div className={`mb-4 flex h-10 w-10 items-center justify-center rounded-xl ${theme.iconBg}`}>
+                      <span className={`text-lg font-black ${theme.iconText}`}>{i + 1}</span>
+                    </div>
+                    <h3 className="text-base font-bold text-gray-900 mb-2">{step.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+                    {i < (cfg.process?.length ?? 0) - 1 && (
+                      <ChevronRight className="hidden lg:block absolute top-1/2 -right-4 h-5 w-5 text-gray-300" />
+                    )}
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── BEFORE / AFTER (interactive) ─────────────────────────────── */}
+      {cfg.gallery.length > 0 && (
+        <section className={`py-20 ${theme.sectionAlt}`}>
+          <div className="container-demo">
+            <Reveal>
+              <div className="text-center mb-14">
+                <p className={`text-xs font-bold uppercase tracking-widest ${theme.accentText} mb-2`}>Our Work</p>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                  See the Difference — Drag to Compare
+                </h2>
+                <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+                  Real projects, real results. Slide the handle to see the transformation.
+                </p>
+              </div>
+            </Reveal>
+            <div className="grid gap-6 md:grid-cols-3">
+              {cfg.gallery.slice(0, 3).map((g, i) => (
+                <Reveal key={g.label} delay={i * 120}>
+                  <BeforeAfterSlider
+                    label={g.label}
+                    desc={g.desc}
+                    beforeClass={g.before ?? 'bg-gray-800'}
+                    afterClass={g.after ?? 'bg-slate-900'}
+                    accentBg={cfg.bgAccentClass}
+                  />
+                </Reveal>
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Link href={`${base}/gallery`}
+                className={`inline-flex items-center gap-2 text-sm font-semibold ${theme.accentText} hover:underline`}>
+                View the full gallery <ChevronRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── HIGHLIGHT (insurance claims / guarantee / packages) ──────── */}
       {cfg.highlight && (
@@ -503,6 +574,14 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
           </p>
         </div>
       </section>
+
+      {/* ── STICKY MOBILE CALL BAR ───────────────────────────────────── */}
+      <StickyCallBar
+        phone={cfg.phone}
+        cta="Call Now"
+        quoteHref={`${base}/quote`}
+        btnPrimary={theme.btnPrimary}
+      />
 
     </div>
   )

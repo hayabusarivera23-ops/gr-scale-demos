@@ -81,4 +81,15 @@ export interface DemoConfig {
     body: string
     bullets: string[]
   }
+  /** "How it works" process timeline (flagship demos) */
+  process?: {
+    title: string
+    desc: string
+  }[]
+  /** Real-number stats for the animated counter row (flagship demos) */
+  stats?: {
+    value: number
+    suffix: string
+    label: string
+  }[]
 }

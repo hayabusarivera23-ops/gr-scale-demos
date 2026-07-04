@@ -73,6 +73,20 @@ const config: DemoConfig = {
     { label: 'Maintenance Tune-Up', desc: 'Annual tune-up preventing a $1,200 compressor failure for this customer',    before: 'bg-gray-800', after: 'bg-sky-900'  },
     { label: 'Emergency Repair',    desc: 'Midnight call — family of 5, unit down. Back up in 2 hours',                 before: 'bg-zinc-800', after: 'bg-blue-900' },
   ],
+
+  stats: [
+    { value: 15,   suffix: '+',    label: 'Years serving Central Florida' },
+    { value: 4800, suffix: '+',    label: 'Systems repaired & installed' },
+    { value: 60,   suffix: ' min', label: 'Average emergency response' },
+    { value: 100,  suffix: '%',    label: 'Satisfaction guarantee' },
+  ],
+
+  process: [
+    { title: 'Call or Book Online',  desc: 'A real person answers — day or night. Tell us what\'s wrong and we\'ll dispatch the right tech with the right parts.' },
+    { title: 'Upfront Flat Quote',   desc: 'We diagnose, then show you the exact price BEFORE any work starts. You approve it or you don\'t pay a dime.' },
+    { title: 'Fixed Right, Fast',    desc: 'Fully-stocked trucks mean most repairs finish on the first visit. We protect your floors and clean up after.' },
+    { title: 'Follow-Up & Warranty', desc: 'We call the next day to confirm everything\'s perfect. Parts and labor backed in writing.' },
+  ],
 }
 
 export default config

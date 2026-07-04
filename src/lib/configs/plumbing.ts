@@ -80,6 +80,20 @@ const config: DemoConfig = {
     points:   ['0% interest for 12 months', 'Terms up to 60 months', 'Approval in about a minute'],
   },
 
+  stats: [
+    { value: 14,   suffix: '+',    label: 'Years serving Greater Orlando' },
+    { value: 6500, suffix: '+',    label: 'Plumbing jobs completed' },
+    { value: 45,   suffix: ' min', label: 'Average emergency arrival' },
+    { value: 100,  suffix: '%',    label: 'Upfront flat-rate pricing' },
+  ],
+
+  process: [
+    { title: 'Talk to a Real Plumber', desc: 'No call center. A licensed plumber answers 24/7, helps you stop the damage, and dispatches a stocked truck.' },
+    { title: 'Flat Rate Before Work',  desc: 'We diagnose and quote the complete price up front. The number we say is the number you pay — period.' },
+    { title: 'Fixed On First Visit',   desc: 'Our trucks carry the parts for 90% of repairs. Shoe covers on, work area protected, mess gone when we leave.' },
+    { title: 'Tested & Guaranteed',    desc: 'We pressure-test the repair, show you the result, and back it with a written parts + labor guarantee.' },
+  ],
+
   highlight: {
     tag:   '24/7 Emergency',
     title: 'Burst Pipe at 2AM? A Real Plumber Answers Our Phone.',
