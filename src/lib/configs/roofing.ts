@@ -10,8 +10,18 @@ const config: DemoConfig = {
   accentClass:     'text-amber-400',
   bgAccentClass:   'bg-amber-500',
   tagline:         'Orlando\'s Trusted Roofing Contractor',
-  heroHeadline:    'Roof Repair & Replacement Done Right',
-  heroSubheadline: 'Storm damage? Old roof? Get a free inspection today. Licensed roofing contractor serving Greater Orlando with a 10-year workmanship warranty.',
+  heroHeadline:    'The Roof Over Your Family Deserves Better Than a Guess',
+  heroSubheadline: 'Free drone inspection with photo proof — today if you call before 2pm. We\'ve replaced 3,200+ Orlando roofs, get 98% of storm claims approved, and back every nail with a 10-year warranty.',
+  heroImage:       'https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&w=1920&q=80',
+
+  trustBadges: [
+    { label: 'GAF Certified',   sub: 'Factory-trained installer' },
+    { label: 'Owens Corning',   sub: 'Preferred contractor' },
+    { label: 'A+ BBB Rating',   sub: 'Accredited since 2011' },
+    { label: '$2M Insured',     sub: 'Liability + workers comp' },
+    { label: '10-Yr Warranty',  sub: 'Workmanship in writing' },
+    { label: '0% Financing',    sub: 'Up to 120 months' },
+  ],
   cta:             'Get Free Roof Inspection',
   phone:           '(407) 555-0200',
   email:           'estimate@peakroofing.com',
@@ -100,9 +110,9 @@ const config: DemoConfig = {
   ],
 
   gallery: [
-    { label: 'Shingle Replacement',  desc: 'Full architectural shingle replacement — 2,400 sq ft', before: 'bg-gray-800', after: 'bg-amber-900' },
-    { label: 'Storm Damage',         desc: 'Insurance-covered replacement after hurricane damage',  before: 'bg-gray-800', after: 'bg-amber-900' },
-    { label: 'Metal Roof Install',   desc: 'Standing seam metal roof on custom home',               before: 'bg-gray-800', after: 'bg-amber-900' },
+    { label: 'Shingle Replacement',  desc: 'Full architectural shingle replacement — 2,400 sq ft', before: 'bg-gray-800', after: 'bg-amber-900', img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Storm Damage',         desc: 'Insurance-covered replacement after hurricane damage',  before: 'bg-gray-800', after: 'bg-amber-900', img: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Metal Roof Install',   desc: 'Standing seam metal roof on custom home',               before: 'bg-gray-800', after: 'bg-amber-900', img: 'https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=75' },
     { label: 'Tile Roof',            desc: 'Concrete tile replacement — Mediterranean style',       before: 'bg-gray-800', after: 'bg-amber-900' },
     { label: 'Flat Roof (TPO)',      desc: 'Commercial TPO membrane installation',                  before: 'bg-gray-800', after: 'bg-amber-900' },
     { label: 'Gutter Install',       desc: 'K-style seamless aluminum gutters + guards',            before: 'bg-gray-800', after: 'bg-amber-900' },

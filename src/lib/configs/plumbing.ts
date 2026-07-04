@@ -10,8 +10,18 @@ const config: DemoConfig = {
   accentClass:     'text-blue-400',
   bgAccentClass:   'bg-blue-500',
   tagline:         'Orlando\'s Most Trusted Plumbers',
-  heroHeadline:    'Fast, Reliable Plumbing — 24/7',
-  heroSubheadline: 'Leak? Clog? No hot water? We fix it fast. Serving Greater Orlando with licensed plumbers, same-day service, and upfront pricing.',
+  heroHeadline:    'Water Where It Shouldn\'t Be? Answered by a Plumber in 3 Rings.',
+  heroSubheadline: 'No call centers, no "next available appointment." A licensed plumber picks up 24/7, helps you stop the damage on the phone, and a stocked truck is at your door in about 45 minutes.',
+  heroImage:       'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1920&q=80',
+
+  trustBadges: [
+    { label: 'FL Licensed',       sub: 'CFC1234567 · verified' },
+    { label: '24/7 Live Answer',  sub: 'Real plumber, 3 rings' },
+    { label: 'A+ BBB Rating',     sub: 'Accredited since 2013' },
+    { label: 'Fully Insured',     sub: 'Liability + workers comp' },
+    { label: 'Flat-Rate Pricing', sub: 'Price before work' },
+    { label: '0% Financing',      sub: 'Water heaters & repipes' },
+  ],
   cta:             'Call Now — We Answer 24/7',
   phone:           '(407) 555-0100',
   email:           'service@eliteplumbingco.com',
@@ -66,9 +76,9 @@ const config: DemoConfig = {
   ],
 
   gallery: [
-    { label: 'Drain Cleaning',   desc: 'Complete main line cleanout — cleared same day', before: 'bg-gray-800', after: 'bg-blue-900' },
-    { label: 'Water Heater',     desc: '50-gal tank replacement, installed in 3 hours',  before: 'bg-gray-800', after: 'bg-blue-900' },
-    { label: 'Slab Leak Repair', desc: 'Detected and repaired with minimal floor damage', before: 'bg-gray-800', after: 'bg-blue-900' },
+    { label: 'Bathroom Repipe',  desc: 'Full fixture upgrade + repipe — spa-quality finish', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Fixture Upgrade',  desc: 'Designer fixtures installed — kitchen and both baths', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Leak Repair',      desc: 'Dripping faucet and supply lines — fixed in one visit', before: 'bg-gray-800', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=1200&q=75' },
     { label: 'Repipe Project',   desc: 'Full home repipe — 4 bed/2 bath, 2 days',        before: 'bg-gray-800', after: 'bg-blue-900' },
     { label: 'Bathroom Remodel', desc: 'Full rough-in for master bath addition',          before: 'bg-gray-800', after: 'bg-blue-900' },
     { label: 'Backflow Test',    desc: 'Annual backflow prevention testing & cert',       before: 'bg-gray-800', after: 'bg-blue-900' },

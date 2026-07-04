@@ -18,9 +18,11 @@ export interface FAQItem {
 
 export interface GalleryItem {
   label: string
-  before?: string  // placeholder color class
+  before?: string  // placeholder color class (fallback when no img)
   after?: string
   desc: string
+  /** Real photo URL — slider shows it clean (after) vs worn-filter (before) */
+  img?: string
 }
 
 export interface DemoConfig {
@@ -91,5 +93,14 @@ export interface DemoConfig {
     value: number
     suffix: string
     label: string
+  }[]
+  /** Hero background photo (licensed stock; swap for client photos later) */
+  heroImage?: string
+  /** About-section photo (technician/team at work) */
+  aboutImage?: string
+  /** Trust strip: certifications, warranties, financing partners */
+  trustBadges?: {
+    label: string
+    sub: string
   }[]
 }

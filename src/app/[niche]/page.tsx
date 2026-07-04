@@ -103,9 +103,19 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
 
       {/* ── HERO ──────────────────────────────────────────────────────── */}
       <section className={`relative bg-gradient-to-br ${theme.heroBg} text-white overflow-hidden`}>
-        {/* Background texture */}
-        <div className="absolute inset-0 opacity-5"
-          style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
+        {/* Real photo background with cinematic overlay */}
+        {cfg.heroImage ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={cfg.heroImage} alt="" aria-hidden fetchPriority="high"
+              className="absolute inset-0 h-full w-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/30" />
+          </>
+        ) : (
+          <div className="absolute inset-0 opacity-5"
+            style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
+        )}
 
         <div className="container-demo relative py-24 md:py-32 lg:py-40">
           <div className="max-w-3xl">
@@ -164,6 +174,22 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
           🎁 {cfg.offerLine}
         </p>
       </div>
+
+      {/* ── TRUST BADGE STRIP ────────────────────────────────────────── */}
+      {cfg.trustBadges && (
+        <section className="border-b border-gray-100 bg-white">
+          <div className="container-demo py-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {cfg.trustBadges.map(b => (
+                <div key={b.label} className="flex flex-col items-center justify-center text-center rounded-xl border border-gray-100 bg-gray-50/60 px-3 py-3">
+                  <p className="text-[13px] font-extrabold text-gray-800 leading-tight">{b.label}</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5 leading-tight">{b.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── WHY CHOOSE US ────────────────────────────────────────────── */}
       <section className="py-16 bg-white">
@@ -326,11 +352,16 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
               What Our Customers Say
             </h2>
-            <div className="flex items-center justify-center gap-1.5 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-              ))}
-              <span className="ml-2 text-sm text-gray-500">5.0 · 100+ Google reviews</span>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm text-[15px] font-black"
+                style={{ color: '#4285F4' }}>G</span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-sm font-semibold text-gray-700">5.0</span>
+              <span className="text-sm text-gray-500">· 100+ verified Google reviews</span>
             </div>
           </div>
 
@@ -424,6 +455,7 @@ export default async function NicheHomePage({ params }: { params: Promise<{ nich
                     beforeClass={g.before ?? 'bg-gray-800'}
                     afterClass={g.after ?? 'bg-slate-900'}
                     accentBg={cfg.bgAccentClass}
+                    img={g.img}
                   />
                 </Reveal>
               ))}

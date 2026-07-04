@@ -10,8 +10,18 @@ const config: DemoConfig = {
   accentClass:     'text-blue-400',
   bgAccentClass:   'bg-blue-500',
   tagline:         'Orlando\'s Most Trusted HVAC Company',
-  heroHeadline:    'Fast AC Repair & Installation — Same Day',
-  heroSubheadline: 'AC broke down in the Florida heat? We fix it fast. Licensed HVAC technicians serving Greater Orlando with same-day service, upfront pricing, and a 100% satisfaction guarantee.',
+  heroHeadline:    'Your AC Died in 95° Heat. We\'ll Be There Today.',
+  heroSubheadline: 'Fully-stocked trucks, techs dispatched in 15 minutes, and the exact price approved by you before a single screw turns. 4,800+ Orlando systems fixed — most on the first visit.',
+  heroImage:       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80',
+
+  trustBadges: [
+    { label: 'NATE Certified',   sub: 'Every technician' },
+    { label: 'Carrier Dealer',   sub: 'Factory authorized' },
+    { label: 'EPA Certified',    sub: 'Refrigerant licensed' },
+    { label: 'A+ BBB Rating',    sub: 'Accredited business' },
+    { label: '100% Guarantee',   sub: 'Fixed right or free' },
+    { label: '0% Financing',     sub: 'On new systems' },
+  ],
   cta:             'Call Now — We Answer 24/7',
   phone:           '(407) 555-0150',
   email:           'service@coolprohvac.com',
@@ -66,9 +76,9 @@ const config: DemoConfig = {
   ],
 
   gallery: [
-    { label: 'AC Repair',           desc: 'Compressor replacement — completed same day, unit running like new',         before: 'bg-slate-700', after: 'bg-blue-900' },
-    { label: 'New Installation',    desc: '3-ton Carrier system install — 4 bedroom home, completed in one day',         before: 'bg-gray-700', after: 'bg-blue-900' },
-    { label: 'Commercial HVAC',     desc: 'Restaurant HVAC overhaul — 3 rooftop units replaced over a weekend',         before: 'bg-zinc-700', after: 'bg-sky-900'  },
+    { label: 'AC Repair',           desc: 'Compressor replacement — completed same day, unit running like new',         before: 'bg-slate-700', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'New Installation',    desc: '3-ton Carrier system install — 4 bedroom home, completed in one day',         before: 'bg-gray-700', after: 'bg-blue-900', img: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=75' },
+    { label: 'Commercial HVAC',     desc: 'Restaurant HVAC overhaul — 3 rooftop units replaced over a weekend',         before: 'bg-zinc-700', after: 'bg-sky-900', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=75' },
     { label: 'Duct Cleaning',       desc: 'Full duct clean and sanitize — before/after air quality test included',       before: 'bg-slate-800', after: 'bg-blue-900' },
     { label: 'Maintenance Tune-Up', desc: 'Annual tune-up preventing a $1,200 compressor failure for this customer',    before: 'bg-gray-800', after: 'bg-sky-900'  },
     { label: 'Emergency Repair',    desc: 'Midnight call — family of 5, unit down. Back up in 2 hours',                 before: 'bg-zinc-800', after: 'bg-blue-900' },

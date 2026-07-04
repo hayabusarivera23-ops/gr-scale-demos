@@ -97,12 +97,14 @@ export function AnimatedStat({ value, suffix = '', label, accentClass = 'text-sk
 
 // ─── BeforeAfterSlider: interactive drag comparison ──────────────────────────
 
-export function BeforeAfterSlider({ label, desc, beforeClass, afterClass, accentBg }: {
+export function BeforeAfterSlider({ label, desc, beforeClass, afterClass, accentBg, img }: {
   label: string
   desc: string
   beforeClass: string
   afterClass: string
   accentBg: string
+  /** Real photo: rendered clean on the After side, worn-filtered on Before */
+  img?: string
 }) {
   const [pos, setPos] = useState(55)
   const trackRef = useRef<HTMLDivElement>(null)
@@ -136,12 +138,23 @@ export function BeforeAfterSlider({ label, desc, beforeClass, afterClass, accent
         }}
       >
         {/* After (full) */}
-        <div className={`absolute inset-0 ${afterClass}`}>
-          <span className="absolute bottom-3 right-3 rounded-md bg-black/50 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">After</span>
+        <div className={`absolute inset-0 ${img ? '' : afterClass}`}>
+          {img && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={img} alt={`${label} — completed work`} loading="lazy" decoding="async"
+              className="absolute inset-0 h-full w-full object-cover" draggable={false} />
+          )}
+          <span className="absolute bottom-3 right-3 z-10 rounded-md bg-black/50 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">After</span>
         </div>
         {/* Before (clipped) */}
-        <div className={`absolute inset-0 ${beforeClass}`} style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-          <span className="absolute bottom-3 left-3 rounded-md bg-black/50 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">Before</span>
+        <div className={`absolute inset-0 ${img ? '' : beforeClass}`} style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
+          {img && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={img} alt="" aria-hidden loading="lazy" decoding="async"
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ filter: 'grayscale(0.9) brightness(0.62) sepia(0.25) contrast(0.92)' }} draggable={false} />
+          )}
+          <span className="absolute bottom-3 left-3 z-10 rounded-md bg-black/50 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">Before</span>
         </div>
         {/* Handle */}
         <div className="absolute top-0 bottom-0 w-0.5 bg-white shadow-[0_0_8px_rgba(0,0,0,0.4)]" style={{ left: `${pos}%` }}>
