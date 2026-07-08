@@ -24,7 +24,7 @@ export default async function NicheLayout({ children, params }: LayoutProps) {
           🎨 <span className="text-white font-semibold">{cfg.agencyTag}</span>
           {' · '}
           <a
-            href="https://grscale.com"
+            href="https://gr-scale-website.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-400 hover:underline"
