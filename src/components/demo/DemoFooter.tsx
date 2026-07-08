@@ -134,7 +134,7 @@ export default function DemoFooter({ cfg, niche, theme }: DemoFooterProps) {
           </div>
           <p className="text-xs text-gray-700">
             Website by{' '}
-            <a href="https://grscale.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://gr-scale-website.vercel.app" target="_blank" rel="noopener noreferrer"
               className="text-sky-400 hover:underline">
               GR Scale
             </a>
