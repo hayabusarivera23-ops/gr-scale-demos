@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   '5-Year Workmanship Warranty',
   emergencyAvailable: false,
   offerLine:       'Free color consultation with every estimate ($150 value)',
+  heroImage:       'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'Licensed & Insured',sub: 'Lead-safe EPA certified' },
+    { label: 'W-2 Painters',     sub: 'No day labor, ever' },
+    { label: '5-Yr Warranty',    sub: 'Workmanship in writing' },
+    { label: 'Sherwin-Williams', sub: 'Premium paint standard' },
+    { label: 'Free Color Consult',sub: '$150 value included' },
+    { label: 'A+ BBB Rating',    sub: 'Accredited business' },
+  ],
   metaTitle:       'TrueCoat Painting — Interior & Exterior Painters in Orlando, FL',
   metaDescription: 'Orlando\'s top-rated painters. Interior, exterior, cabinets. 5-year warranty, free color consultation. Call (407) 555-1000.',
 

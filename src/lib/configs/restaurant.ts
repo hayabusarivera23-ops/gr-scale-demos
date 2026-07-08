@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   'Voted Best Latin — Orlando Weekly',
   emergencyAvailable: false,
   offerLine:       'Happy hour Tue–Fri 4–6pm · half-price signature cocktails',
+  heroImage:       'https://images.unsplash.com/photo-1622003184404-bc0c66144534?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'Best Latin 2025',  sub: 'Orlando Weekly' },
+    { label: 'Wood-Fired Grill', sub: 'Everything fresh' },
+    { label: 'Craft Cocktails',  sub: 'Curated wine list' },
+    { label: 'Private Events',   sub: 'Room for 12-40' },
+    { label: 'Weekend Brunch',   sub: 'Sat-Sun 10-2' },
+    { label: 'Reservations',     sub: 'Book in 30 seconds' },
+  ],
   metaTitle:       'Casa Verde Kitchen — Modern Latin Restaurant in Orlando | Reservations',
   metaDescription: 'Wood-fired modern Latin cuisine in downtown Orlando. Dinner, weekend brunch, craft cocktails, private events. Reserve: (407) 555-0700.',
 

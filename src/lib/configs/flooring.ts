@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   'Lifetime Installation Warranty',
   emergencyAvailable: false,
   offerLine:       'Free upgrade to premium underlayment this month',
+  heroImage:       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'Licensed & Insured',sub: '1M+ sq ft installed' },
+    { label: 'Lifetime Warranty', sub: 'On installation' },
+    { label: 'Free In-Home Quote',sub: 'Samples to your door' },
+    { label: 'Furniture Moving',  sub: 'Included on most jobs' },
+    { label: '0% Financing',      sub: '12 months, $2,500+' },
+    { label: 'A+ BBB Rating',     sub: 'Accredited business' },
+  ],
   metaTitle:       'Solid Ground Flooring — Flooring Installation in Tampa, FL | Free Estimate',
   metaDescription: 'Tampa flooring: hardwood, LVP, tile, laminate, carpet. Free in-home estimates, lifetime install warranty, financing. (813) 555-1100.',
 

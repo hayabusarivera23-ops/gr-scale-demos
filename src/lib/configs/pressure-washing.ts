@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   'Satisfaction Guaranteed or We Come Back Free',
   emergencyAvailable: false,
   offerLine:       '10% off your first service — mention this site',
+  heroImage:       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'Licensed & Insured',sub: 'Full coverage' },
+    { label: 'Soft-Wash Certified',sub: 'Roof-safe methods' },
+    { label: 'Instant Quotes',   sub: 'Priced by photo' },
+    { label: 'Satisfaction Promise',sub: 'Re-wash free' },
+    { label: 'Same-Week Service',sub: 'Fast scheduling' },
+    { label: 'Package Bundles',  sub: 'House + drive + roof' },
+  ],
   metaTitle:       'SparkClean Pressure Washing Orlando | Driveways, Homes, Roofs',
   metaDescription: 'Professional pressure washing in Orlando FL. Driveways, house washing, roof cleaning, and more. Licensed & insured. Get an instant quote today.',
 

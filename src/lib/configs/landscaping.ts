@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   '100% Satisfaction Guarantee',
   emergencyAvailable: false,
   offerLine:       'First lawn service FREE when you sign up for a monthly plan',
+  heroImage:       'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'Licensed & Insured',sub: 'Full coverage' },
+    { label: 'Monthly Plans',    sub: 'From $180/mo' },
+    { label: 'All Irrigation Brands',sub: 'Hunter, Rain Bird +' },
+    { label: 'Free Estimates',   sub: 'Honest recommendations' },
+    { label: 'Seasonal Programs',sub: 'Year-round care' },
+    { label: 'A+ BBB Rating',    sub: 'Accredited business' },
+  ],
   metaTitle:       'GreenEdge Landscaping Orlando | Lawn Care & Landscape Design',
   metaDescription: 'Professional landscaping in Orlando FL. Lawn care, landscape design, irrigation, and more. Licensed & insured. Get a free estimate today.',
 

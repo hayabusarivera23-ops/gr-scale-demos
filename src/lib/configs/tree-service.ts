@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   'ISA-Certified Arborists',
   emergencyAvailable: true,
   offerLine:       'Free estimates + 10% off any job booked this month',
+  heroImage:       'https://images.unsplash.com/photo-1531756716853-09a60d38d820?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'ISA Certified',    sub: 'Arborists on staff' },
+    { label: '$2M Insured',      sub: 'Certificates provided' },
+    { label: '24/7 Storm Response',sub: 'Crane-equipped crews' },
+    { label: 'Insurance Claims', sub: 'We document everything' },
+    { label: 'Free Estimates',   sub: 'Written, exact quotes' },
+    { label: 'Permits Handled',  sub: 'Included in every job' },
+  ],
   metaTitle:       'IronOak Tree Service — Tree Removal & Trimming in Orlando | 24/7 Emergency',
   metaDescription: 'Orlando tree removal, trimming, stump grinding, crane work. ISA-certified, $2M insured, 24/7 storm response. (407) 555-1200.',
 

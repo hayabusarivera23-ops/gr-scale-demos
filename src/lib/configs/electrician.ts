@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   'Lifetime Workmanship Guarantee',
   emergencyAvailable: true,
   offerLine:       '$49 electrical safety inspection with any repair',
+  heroImage:       'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'FL Licensed EC',   sub: 'EC13012345 · verified' },
+    { label: '24/7 Emergency',   sub: 'Real electrician answers' },
+    { label: 'A+ BBB Rating',    sub: 'Accredited business' },
+    { label: 'Fully Insured',    sub: 'Liability + workers comp' },
+    { label: 'Lifetime Warranty',sub: 'On workmanship' },
+    { label: '0% Financing',     sub: 'Panels & EV chargers' },
+  ],
   metaTitle:       'Bright Current Electric — Licensed Electrician in Tampa, FL | 24/7',
   metaDescription: 'Licensed Tampa electricians. Panel upgrades, EV chargers, emergency service 24/7. Upfront pricing. Call (813) 555-0400.',
 

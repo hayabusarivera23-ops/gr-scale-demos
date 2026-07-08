@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   '200% Satisfaction Guarantee',
   emergencyAvailable: false,
   offerLine:       '$40 off your first deep clean — this month only',
+  heroImage:       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'Bonded & Insured', sub: 'Full coverage' },
+    { label: 'Background Checked',sub: 'Every cleaner' },
+    { label: '200% Guarantee',   sub: 'Re-clean or refund' },
+    { label: 'Same Team',        sub: 'Every single visit' },
+    { label: 'Supplies Included',sub: 'Eco-friendly products' },
+    { label: 'From $109/visit',  sub: 'Flat-rate pricing' },
+  ],
   metaTitle:       'FreshNest Cleaning — House Cleaning & Maid Service in Orlando, FL',
   metaDescription: 'Top-rated Orlando house cleaning. Recurring, deep clean, move-in/out. Bonded, insured, 200% guarantee. Book: (407) 555-0800.',
 

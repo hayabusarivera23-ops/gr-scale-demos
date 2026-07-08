@@ -24,6 +24,14 @@ const config: DemoConfig = {
   guaranteeText:   'Love Your Cut or We Fix It Free',
   emergencyAvailable: false,
   offerLine:       'First-time clients: $5 off any service — mention this site',
+  trustBadges: [
+    { label: 'Licensed FL Barber',sub: 'BB1234567 · verified' },
+    { label: '5.0★ on Google',   sub: '100+ reviews' },
+    { label: 'Book Online',      sub: '30-second booking' },
+    { label: 'Walk-Ins Welcome', sub: 'Every day' },
+    { label: 'Love It Guarantee',sub: 'Or we fix it free' },
+    { label: 'Est. 2017',        sub: '9+ years in Orlando' },
+  ],
   metaTitle:       'Sharp & Co. Barbershop Orlando | Precision Fades & Classic Cuts',
   metaDescription: 'Orlando\'s top-rated barbershop. Precision fades, classic cuts, straight razor shaves. Book online in 30 seconds. Walk-ins welcome at (407) 555-0175.',
 

@@ -24,6 +24,15 @@ const config: DemoConfig = {
   guaranteeText:   'Free Re-Treatment Guarantee',
   emergencyAvailable: true,
   offerLine:       '$50 off your first treatment + free inspection',
+  heroImage:       'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1920&q=80',
+  trustBadges: [
+    { label: 'FL Licensed',      sub: 'JB123456 · verified' },
+    { label: 'Pet-Safe Products',sub: 'EPA registered' },
+    { label: 'A+ BBB Rating',    sub: 'Accredited business' },
+    { label: 'Free Re-Treats',   sub: 'Unlimited, guaranteed' },
+    { label: 'Same-Week Service',sub: 'Most new customers' },
+    { label: 'From $45/mo',      sub: '12 pests covered' },
+  ],
   metaTitle:       'ShieldPro Pest Control — Tampa Exterminator | Free Inspection',
   metaDescription: 'Tampa pest control: roaches, ants, termites, rodents, mosquitoes. Pet-safe treatments, free re-treatments. Call (813) 555-0900.',
 
